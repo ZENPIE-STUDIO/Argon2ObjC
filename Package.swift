@@ -23,12 +23,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
     	.target(
     		name: "Argon2ObjC",
-    		path: "."
+    		dependencies: ["argon2"],
+    		path: ".",
     		sources: [
     			"Argon2ObjC/Argon2Hash.m",
     			"Argon2ObjC/ZPUtils.m",
-    		],
-    		dependencies: ["argon2"]
+    		]
     	),
 //    	.binaryTarget(
 //			name: "Argon2ObjC-BinaryPackage",
