@@ -12,32 +12,17 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(name: "Argon2ObjC", targets: ["Argon2ObjC"]),
-//        .library(name: "Argon2ObjC-XCFramework", targets: ["Argon2ObjC-BinaryPackage"]),        
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-//		.package(name: "argon2", url: "https://github.com/P-H-C/phc-winner-argon2.git", .branch("master"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-//    	.target(
-//    		name: "Argon2ObjC",
-//    		dependencies: ["argon2"],
-//    		path: ".",
-//    		sources: [
-//    			"Argon2ObjC/Argon2Hash.m",
-//    			"Argon2ObjC/ZPUtils.m",
-//    		]
-//    	),
    		.binaryTarget(
 			name: "Argon2ObjC",
 			url: "https://github.com/ZENPIE-STUDIO/Argon2ObjC/releases/download/v1.0.0/Argon2ObjC.xcframework.zip",
 			checksum: "8385bdd0150e94ac5f81a8acfde81b78030013dc71cae5686bef0774171cead8"
 		),
-//		.testTarget(
-//    		name: "Argon2ObjCTests",
-//           	dependencies: ["Argon2ObjC"]
-//        ),
     ]
 )
