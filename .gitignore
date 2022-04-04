@@ -6,6 +6,7 @@
 .build/
 archives/
 ZZ.Release/
+Package.resolved
 
 ## User settings
 xcuserdata/
