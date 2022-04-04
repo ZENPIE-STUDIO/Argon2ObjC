@@ -76,3 +76,6 @@ rm -rf "$WORKSPACE/archives"
 echo "[XCFramework] Compress xcframework"
 cd $WORKSPACE/ZZ.Release/v$VERSION_NUMBER-$NOW
 zip -vry $PROD_NAME.xcframework.zip $PROD_NAME.xcframework/ -x "*.DS_Store"
+
+# Compute checksum
+swift package compute-checksum $PROD_NAME.xcframework.zip
