@@ -11,7 +11,7 @@ let package = Package(
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "Argon2ObjC", targets: ["Argon2ObjC", "Argon2ObjC-BinaryPackage"]),
+        .library(name: "Argon2ObjC", targets: ["Argon2ObjC"]),
 //        .library(name: "Argon2ObjC-XCFramework", targets: ["Argon2ObjC-BinaryPackage"]),        
     ],
     dependencies: [
@@ -25,11 +25,11 @@ let package = Package(
     		name: "Argon2ObjC",
     		dependencies: ["argon2"]
     	),
-    	.binaryTarget(
-			name: "Argon2ObjC-BinaryPackage",
-			url: "https://github.com/ZENPIE-STUDIO/Argon2ObjC/releases/download/v1.0.0/Argon2ObjC.xcframework.zip",
-			checksum: "8385bdd0150e94ac5f81a8acfde81b78030013dc71cae5686bef0774171cead8"
-		),
+//    	.binaryTarget(
+//			name: "Argon2ObjC-BinaryPackage",
+//			url: "https://github.com/ZENPIE-STUDIO/Argon2ObjC/releases/download/v1.0.0/Argon2ObjC.xcframework.zip",
+//			checksum: "8385bdd0150e94ac5f81a8acfde81b78030013dc71cae5686bef0774171cead8"
+//		),
 		.testTarget(
     		name: "Argon2ObjCTests",
            	dependencies: ["Argon2ObjC"]
